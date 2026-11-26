@@ -8,9 +8,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-light.svg">
-    <img alt="RTX 5060 Empirical Log-Log Roofline and Systems Telemetry" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-light.svg?v=2">
+    <img alt="RTX 5060 Empirical Log-Log Roofline and Systems Telemetry" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-light.svg?v=2" width="100%">
   </picture>
 </p>
 
@@ -48,9 +48,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake.svg">
-    <img alt="yuri-infra Animated Contribution Grid Snake" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake.svg?v=2">
+    <img alt="yuri-infra Animated Contribution Grid Snake" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake.svg?v=2" width="100%">
   </picture>
 </p>
 
