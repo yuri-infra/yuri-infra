@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 156" width="850" height="156" role="img" aria-label="qwen-paged-serving project architecture card">
+  <defs>
+    <linearGradient id="cBg_02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fafcfe"/>
+      <stop offset="100%" stop-color="#f3f7fb"/>
+    </linearGradient>
+    <pattern id="dGrid_02" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#e8eef5" stroke-width="0.6" stroke-opacity="0.75"/>
+    </pattern>
+    <clipPath id="cClip_02">
+      <rect x="1" y="1" width="848" height="154" rx="10"/>
+    </clipPath>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+    @keyframes rxFlow1 { 0% { stroke-dashoffset: 140; } 100% { stroke-dashoffset: -40; } }
+    @keyframes rxFlow2 { 0% { stroke-dashoffset: 105; } 100% { stroke-dashoffset: -75; } }
+    @keyframes swapPulse { 0% { stroke-dashoffset: 36; } 100% { stroke-dashoffset: 0; } }
+    .rx1 { stroke-dasharray: 24 156; animation: rxFlow1 2.6s linear infinite; }
+    .rx2 { stroke-dasharray: 22 158; animation: rxFlow2 3.1s linear infinite; }
+    .swp { stroke-dasharray: 6 6; animation: swapPulse 1.4s linear infinite; }
+  </style>
+
+  <g clip-path="url(#cClip_02)">
+    <rect x="0" y="0" width="850" height="156" fill="url(#cBg_02)"/>
+    <!-- 4px Domain Color Spine -->
+    <rect x="0" y="0" width="5.5" height="156" fill="#0284c7"/>
+
+    <!-- Left 300x132 Bespoke Animated Micro-Diagram Well -->
+    <rect x="18" y="12" width="300" height="132" rx="7" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="19" y="13" width="298" height="130" rx="6" fill="url(#dGrid_02)"/>
+    <text x="28" y="25" fill="#0284c7" font-size="7.8" font-weight="700" letter-spacing="0.7" class="mono">RADIX-TREE → PAGED KV</text>
+    <g>
+      <!-- Radix-Tree Static Base Edges -->
+      <path d="M 56 58 H 104 L 136 44 H 178" fill="none" stroke="#0284c7" stroke-width="1.6" stroke-opacity="0.34" stroke-linejoin="round"/>
+      <path d="M 56 58 H 104 L 136 74 H 178" fill="none" stroke="#0284c7" stroke-width="1.6" stroke-opacity="0.34" stroke-linejoin="round"/>
+      <path d="M 56 58 L 86 106 H 134" fill="none" stroke="#64748b" stroke-width="1.2" stroke-opacity="0.45" stroke-dasharray="3 2"/>
+
+      <!-- Animated Glowing Prefix Lookup Packets -->
+      <path d="M 56 58 H 104 L 136 44 H 178" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="rx1"/>
+      <path d="M 56 58 H 104 L 136 74 H 178" fill="none" stroke="#059669" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="rx2"/>
+
+      <!-- Tree Nodes -->
+      <rect x="28" y="48" width="32" height="20" rx="4" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.1"/>
+      <text x="44" y="61" text-anchor="middle" fill="#0284c7" font-size="7.8" font-weight="700" class="mono">SYS</text>
+
+      <rect x="86" y="48" width="36" height="20" rx="4" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="104" y="61" text-anchor="middle" fill="#0284c7" font-size="7.5" font-weight="700" class="mono">CoW</text>
+
+      <circle cx="144" cy="44" r="4" fill="#0284c7" stroke="#ffffff" stroke-width="1.2"/>
+      <text x="144" y="37" text-anchor="middle" fill="#334155" font-size="7.2" class="mono">qA</text>
+      <circle cx="144" cy="74" r="4" fill="#059669" stroke="#ffffff" stroke-width="1.2"/>
+      <text x="144" y="87" text-anchor="middle" fill="#334155" font-size="7.2" class="mono">qB</text>
+
+      <rect x="108" y="97" width="44" height="18" rx="3.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.9"/>
+      <text x="130" y="109" text-anchor="middle" fill="#64748b" font-size="7.2" class="mono">evict</text>
+
+      <!-- Non-Contiguous 16-tok KV Block Pool -->
+      <text x="308" y="25" text-anchor="end" fill="#64748b" font-size="7.2" font-weight="600" class="mono">16-TOK PAGES · 0.63% FRAG</text>
+      <rect x="180" y="36" width="27" height="20" rx="3.5" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/><text x="193.5" y="49" text-anchor="middle" fill="#0284c7" font-size="7.8" font-weight="700" class="mono">P0</text>
+      <rect x="212" y="36" width="27" height="20" rx="3.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/><text x="225.5" y="49" text-anchor="middle" fill="#64748b" font-size="7.8" font-weight="400" class="mono">P1</text>
+      <rect x="244" y="36" width="27" height="20" rx="3.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/><text x="257.5" y="49" text-anchor="middle" fill="#64748b" font-size="7.8" font-weight="400" class="mono">P2</text>
+      <rect x="276" y="36" width="27" height="20" rx="3.5" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/><text x="289.5" y="49" text-anchor="middle" fill="#0284c7" font-size="7.8" font-weight="700" class="mono">P4</text>
+      <rect x="180" y="62" width="27" height="20" rx="3.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/><text x="193.5" y="75" text-anchor="middle" fill="#64748b" font-size="7.8" font-weight="400" class="mono">P5</text>
+      <rect x="212" y="62" width="27" height="20" rx="3.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/><text x="225.5" y="75" text-anchor="middle" fill="#64748b" font-size="7.8" font-weight="400" class="mono">P6</text>
+      <rect x="244" y="62" width="27" height="20" rx="3.5" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/><text x="257.5" y="75" text-anchor="middle" fill="#0284c7" font-size="7.8" font-weight="700" class="mono">P7</text>
+      <rect x="276" y="62" width="27" height="20" rx="3.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/><text x="289.5" y="75" text-anchor="middle" fill="#64748b" font-size="7.8" font-weight="400" class="mono">P9</text>
+
+      <!-- LIFO Async Swap -> CPU Pinned -->
+      <path d="M 238 92 V 110" fill="none" stroke="#d97706" stroke-width="1.5" class="swp"/>
+      <text x="246" y="104" fill="#d97706" font-size="7.2" font-weight="700" class="mono">LIFO Swap ↕</text>
+      <rect x="180" y="112" width="124" height="22" rx="4" fill="#fffbeb" stroke="#fde68a" stroke-width="0.9"/>
+      <text x="242" y="126" text-anchor="middle" fill="#d97706" font-size="7.8" font-weight="700" class="mono">CPU Pinned Pool</text>
+    </g>
+
+    <!-- Right Specification Block -->
+    <g>
+      <!-- Index Badge + Repo Slug + Explore Pill -->
+      <rect x="338" y="16" width="26" height="19" rx="4" fill="#f0f9ff" stroke="#bae6fd" stroke-width="0.9"/>
+      <text x="351" y="29" text-anchor="middle" fill="#0284c7" font-size="9.8" font-weight="700" class="mono">02</text>
+      <text x="373" y="30.5" fill="#0f172a" font-size="16" font-weight="700" class="mono">qwen-paged-serving</text>
+
+      <rect x="742" y="15" width="86" height="22" rx="11" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+      <text x="785" y="29.5" text-anchor="middle" fill="#0284c7" font-size="9.2" font-weight="700" letter-spacing="0.4" class="mono">EXPLORE ↗</text>
+
+      <!-- 1-Line Engineering Thesis -->
+      <text x="338" y="52" fill="#334155" font-size="10.8" class="sans">24L Qwen2.5 serving engine: GQA Tensor Core PagedAttn, Radix-Tree &amp; Chunked-Prefill.</text>
+
+      <!-- 3 KPI Micro-Chips -->
+      <rect x="338" y="66" width="158" height="46" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+      <rect x="338" y="66" width="158" height="2.4" rx="1.2" fill="#0284c7"/>
+      <text x="349" y="86.5" fill="#0284c7" font-size="13.2" font-weight="700" class="mono">7.37× tok/s</text>
+      <text x="349" y="103" fill="#64748b" font-size="8.7" class="mono">840 tok/s · 83.8% hit</text>
+      <rect x="504" y="66" width="158" height="46" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="515" y="86.5" fill="#0f172a" font-size="13.2" font-weight="700" class="mono">-90.5% P99</text>
+      <text x="515" y="103" fill="#64748b" font-size="8.7" class="mono">289→27.5ms ITL</text>
+      <rect x="670" y="66" width="158" height="46" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="681" y="86.5" fill="#0f172a" font-size="13.2" font-weight="700" class="mono">-50.9% Launch</text>
+      <text x="681" y="103" fill="#64748b" font-size="8.7" class="mono">814→400 / step</text>
+
+      <!-- Bottom Stack Strip -->
+      <circle cx="342" cy="133" r="3" fill="#0284c7"/>
+      <text x="352" y="136.5" fill="#64748b" font-size="9" font-weight="600" class="mono">Triton PagedAttn · Radix-Tree · Chunked-Prefill · LIFO Swap · asyncio SSE</text>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="848" height="154" rx="10" fill="none" stroke="#cbd5e1" stroke-width="1.1"/>
+  <path d="M 832 8 H 842 V 18 M 832 148 H 842 V 138" fill="none" stroke="#64748b" stroke-width="1.4" stroke-linecap="square" stroke-opacity="0.72"/>
+</svg>

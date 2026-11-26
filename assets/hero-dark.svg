@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 235" width="850" height="235" role="img" aria-label="Hongwei Zhu yuri-infra GPU Systems Lab Hero">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1520"/>
+      <stop offset="100%" stop-color="#0b1018"/>
+    </linearGradient>
+    <linearGradient id="triRule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="52%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="dieAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#34d399" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="bpGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#182232" stroke-width="0.65" stroke-opacity="0.55"/>
+    </pattern>
+    <clipPath id="heroClip">
+      <rect x="1" y="1" width="848" height="233" rx="10"/>
+    </clipPath>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes statusPing { 0%, 100% { opacity: 0.75; } 50% { opacity: 0.15; } }
+    @keyframes corePulse1 { 0%, 100% { fill-opacity: 0.14; } 50% { fill-opacity: 0.34; } }
+    @keyframes corePulse2 { 0%, 100% { fill-opacity: 0.32; } 50% { fill-opacity: 0.12; } }
+    .cursor { animation: blink 1.05s step-end infinite; }
+    .ping { animation: statusPing 2.2s ease-in-out infinite; }
+    .q1 { animation: corePulse1 3.0s ease-in-out infinite; }
+    .q2 { animation: corePulse2 3.0s ease-in-out infinite; }
+    .q3 { animation: corePulse2 3.6s ease-in-out infinite; }
+    .q4 { animation: corePulse1 3.6s ease-in-out infinite; }
+    @keyframes flow_tr1 { 0% { stroke-dashoffset: 155; } 100% { stroke-dashoffset: -55; } }
+    .tr1 { stroke-dasharray: 24 186; animation: flow_tr1 3.2s linear infinite; }
+    @keyframes flow_tr2 { 0% { stroke-dashoffset: 135; } 100% { stroke-dashoffset: -55; } }
+    .tr2 { stroke-dasharray: 24 166; animation: flow_tr2 2.8s linear infinite; }
+    @keyframes flow_tr3 { 0% { stroke-dashoffset: 165; } 100% { stroke-dashoffset: -55; } }
+    .tr3 { stroke-dasharray: 24 196; animation: flow_tr3 3.6s linear infinite; }
+    @keyframes flow_tr4 { 0% { stroke-dashoffset: 145; } 100% { stroke-dashoffset: -55; } }
+    .tr4 { stroke-dasharray: 24 176; animation: flow_tr4 3.0s linear infinite; }
+    @keyframes flow_tr5 { 0% { stroke-dashoffset: 125; } 100% { stroke-dashoffset: -55; } }
+    .tr5 { stroke-dasharray: 24 156; animation: flow_tr5 2.6s linear infinite; }
+    @keyframes flow_tr6 { 0% { stroke-dashoffset: 150; } 100% { stroke-dashoffset: -60; } }
+    .tr6 { stroke-dasharray: 24 186; animation: flow_tr6 3.4s linear infinite; }
+  </style>
+
+  <g clip-path="url(#heroClip)">
+    <rect x="0" y="0" width="850" height="235" fill="url(#heroBg)"/>
+    <rect x="0" y="0" width="850" height="235" fill="url(#bpGrid)"/>
+    <!-- Subtle atmospheric die aura -->
+    <circle cx="692" cy="134" r="118" fill="url(#dieAura)"/>
+
+    <!-- Top Architectural Eyebrow Bar -->
+    <rect x="28" y="21" width="6" height="6" rx="1" fill="#34d399"/>
+    <text x="41" y="27.5" fill="#7d8590" font-size="9.6" font-weight="600" letter-spacing="0.9" class="mono">GPU SYSTEMS &amp; COMPILERS LAB <tspan fill="#22d3ee">//</tspan> FUDAN UNIVERSITY</text>
+
+    <!-- Status Pill (Top Right) -->
+    <rect x="576" y="13" width="248" height="22" rx="11" fill="#06281e" stroke="#134e3a" stroke-width="1"/>
+    <circle cx="590" cy="24" r="6" fill="none" stroke="#34d399" stroke-width="1" class="ping"/>
+    <circle cx="590" cy="24" r="3.2" fill="#34d399"/>
+    <text x="602" y="27.5" fill="#34d399" font-size="9.2" font-weight="700" letter-spacing="0.3" class="mono">OPEN FOR AI INFRA INTERN · DEC 2026</text>
+
+    <line x1="28" y1="43" x2="526" y2="43" stroke="#1c2533" stroke-width="1"/>
+
+    <!-- Hero Typography Lockup -->
+    <text x="28" y="87" font-size="33" font-weight="800" letter-spacing="-0.6" class="sans">
+      <tspan fill="#f0f6fc">Hongwei Zhu</tspan>
+      <tspan fill="#7d8590" fill-opacity="0.65" font-weight="300" font-size="25"> / </tspan>
+      <tspan fill="#22d3ee" font-size="22" font-weight="700" letter-spacing="-0.2" class="mono">yuri-infra</tspan><tspan fill="#34d399" font-size="21" class="mono cursor"> ▍</tspan>
+    </text>
+
+    <text x="28" y="114" fill="#c9d1d9" font-size="11.6" font-weight="600" class="mono">CUDA C++ (.cu) · OpenAI Triton · TorchInductor</text>
+    <text x="28" y="133" fill="#7d8590" font-size="11" class="mono">LLM Serving Engine · 32K Long-Context Training · Blackwell sm_120</text>
+
+    <!-- Tri-Domain Spectrum Hairline -->
+    <rect x="28" y="149" width="498" height="2" rx="1" fill="url(#triRule)" opacity="0.88"/>
+
+    <!-- Open Hairline-Divided 4-KPI Telemetry Strip -->
+    <g>
+      <line x1="150" y1="164" x2="150" y2="213" stroke="#1c2533" stroke-width="1"/>
+      <line x1="276" y1="164" x2="276" y2="213" stroke="#1c2533" stroke-width="1"/>
+      <line x1="402" y1="164" x2="402" y2="213" stroke="#1c2533" stroke-width="1"/>
+
+      <!-- KPI 1 -->
+      <text x="28" y="182" fill="#34d399" font-size="15.5" font-weight="700" class="mono">311.0 GB/s</text>
+      <text x="28" y="198" fill="#c9d1d9" font-size="9.5" font-weight="600" class="mono">99.5% D2D Roof</text>
+      <text x="28" y="211" fill="#7d8590" font-size="8.6" class="mono">512MB HBM · .cu</text>
+
+      <!-- KPI 2 -->
+      <text x="162" y="182" fill="#22d3ee" font-size="15.5" font-weight="700" class="mono">7.37×</text>
+      <text x="162" y="198" fill="#c9d1d9" font-size="9.5" font-weight="600" class="mono">840 tok/s Serving</text>
+      <text x="162" y="211" fill="#7d8590" font-size="8.6" class="mono">24-way · 83.8% hit</text>
+
+      <!-- KPI 3 -->
+      <text x="288" y="182" fill="#a78bfa" font-size="15.5" font-weight="700" class="mono">32K (32×)</text>
+      <text x="288" y="198" fill="#c9d1d9" font-size="9.5" font-weight="600" class="mono">Single-8GB Train</text>
+      <text x="288" y="211" fill="#7d8590" font-size="8.6" class="mono">2-step steady</text>
+
+      <!-- KPI 4 -->
+      <text x="414" y="182" fill="#22d3ee" font-size="15.5" font-weight="700" class="mono">-50.9%</text>
+      <text x="414" y="198" fill="#c9d1d9" font-size="9.5" font-weight="600" class="mono">814→400 Launches</text>
+      <text x="414" y="211" fill="#7d8590" font-size="8.6" class="mono">.cu / Triton fused</text>
+    </g>
+
+    <!-- Right Sculptural Artwork: Blackwell SM_120 Silicon Die & Animated PCB Bus -->
+    <g>
+      <!-- Radiating PCB Bus Traces + Animated Packets + Via Pads -->
+      <path d="M 634 102 H 584 L 566 84 H 548" fill="none" stroke="#34d399" stroke-width="1.6" stroke-opacity="0.36" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 634 102 H 584 L 566 84 H 548" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="tr1"/>
+      <circle cx="548" cy="84" r="3.6" fill="#0f1520" stroke="#34d399" stroke-width="1.3" stroke-opacity="0.85"/>
+      <circle cx="548" cy="84" r="1.3" fill="#34d399"/>
+      <path d="M 634 134 H 546" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-opacity="0.36" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 634 134 H 546" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="tr2"/>
+      <circle cx="546" cy="134" r="3.6" fill="#0f1520" stroke="#22d3ee" stroke-width="1.3" stroke-opacity="0.85"/>
+      <circle cx="546" cy="134" r="1.3" fill="#22d3ee"/>
+      <path d="M 634 166 H 592 L 574 184 H 550" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-opacity="0.36" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 634 166 H 592 L 574 184 H 550" fill="none" stroke="#a78bfa" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="tr3"/>
+      <circle cx="550" cy="184" r="3.6" fill="#0f1520" stroke="#a78bfa" stroke-width="1.3" stroke-opacity="0.85"/>
+      <circle cx="550" cy="184" r="1.3" fill="#a78bfa"/>
+      <path d="M 750 104 H 790 L 806 88 H 824" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-opacity="0.36" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 750 104 H 790 L 806 88 H 824" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="tr4"/>
+      <circle cx="824" cy="88" r="3.6" fill="#0f1520" stroke="#22d3ee" stroke-width="1.3" stroke-opacity="0.85"/>
+      <circle cx="824" cy="88" r="1.3" fill="#22d3ee"/>
+      <path d="M 750 134 H 824" fill="none" stroke="#34d399" stroke-width="1.6" stroke-opacity="0.36" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 750 134 H 824" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="tr5"/>
+      <circle cx="824" cy="134" r="3.6" fill="#0f1520" stroke="#34d399" stroke-width="1.3" stroke-opacity="0.85"/>
+      <circle cx="824" cy="134" r="1.3" fill="#34d399"/>
+      <path d="M 750 164 H 788 L 806 182 H 824" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-opacity="0.36" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 750 164 H 788 L 806 182 H 824" fill="none" stroke="#a78bfa" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="tr6"/>
+      <circle cx="824" cy="182" r="3.6" fill="#0f1520" stroke="#a78bfa" stroke-width="1.3" stroke-opacity="0.85"/>
+      <circle cx="824" cy="182" r="1.3" fill="#a78bfa"/>
+
+      <!-- Die Pins -->
+      <g stroke="#475569" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.75">
+        <line x1="654" y1="71" x2="654" y2="82"/><line x1="654" y1="186" x2="654" y2="197"/><line x1="674" y1="71" x2="674" y2="82"/><line x1="674" y1="186" x2="674" y2="197"/><line x1="692" y1="71" x2="692" y2="82"/><line x1="692" y1="186" x2="692" y2="197"/><line x1="710" y1="71" x2="710" y2="82"/><line x1="710" y1="186" x2="710" y2="197"/><line x1="730" y1="71" x2="730" y2="82"/><line x1="730" y1="186" x2="730" y2="197"/><line x1="625" y1="102" x2="634" y2="102"/><line x1="750" y1="102" x2="759" y2="102"/><line x1="625" y1="118" x2="634" y2="118"/><line x1="750" y1="118" x2="759" y2="118"/><line x1="625" y1="134" x2="634" y2="134"/><line x1="750" y1="134" x2="759" y2="134"/><line x1="625" y1="150" x2="634" y2="150"/><line x1="750" y1="150" x2="759" y2="150"/><line x1="625" y1="166" x2="634" y2="166"/><line x1="750" y1="166" x2="759" y2="166"/>
+      </g>
+
+      <!-- Chamfered Silicon Package Substrate -->
+      <polygon points="642,82 742,82 750,90 750,178 742,186 642,186 634,178 634,90" fill="#111826" stroke="#263244" stroke-width="1.4"/>
+      <polygon points="646,87 738,87 745,94 745,174 738,181 646,181 639,174 639,94" fill="#0c121e" stroke="#1c2533" stroke-width="0.9"/>
+
+      <!-- 4-Quadrant Core Matrix -->
+      <!-- Q1: CUDA -->
+      <rect x="645" y="93" width="44" height="38" rx="4" fill="#34d399" stroke="#34d399" stroke-width="1" stroke-opacity="0.75" class="q1"/>
+      <text x="667" y="110" text-anchor="middle" fill="#34d399" font-size="9" font-weight="700" class="mono">CUDA</text>
+      <text x="667" y="122" text-anchor="middle" fill="#7d8590" font-size="7.4" class="mono">uint4</text>
+
+      <!-- Q2: TRITON -->
+      <rect x="695" y="93" width="44" height="38" rx="4" fill="#22d3ee" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.75" class="q2"/>
+      <text x="717" y="110" text-anchor="middle" fill="#22d3ee" font-size="8.6" font-weight="700" class="mono">TRITON</text>
+      <text x="717" y="122" text-anchor="middle" fill="#7d8590" font-size="7.4" class="mono">GQA</text>
+
+      <!-- Q3: ATEN -->
+      <rect x="645" y="137" width="44" height="38" rx="4" fill="#22d3ee" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.75" class="q3"/>
+      <text x="667" y="154" text-anchor="middle" fill="#22d3ee" font-size="9" font-weight="700" class="mono">ATEN</text>
+      <text x="667" y="166" text-anchor="middle" fill="#7d8590" font-size="7.4" class="mono">PASS</text>
+
+      <!-- Q4: RING -->
+      <rect x="695" y="137" width="44" height="38" rx="4" fill="#a78bfa" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.75" class="q4"/>
+      <text x="717" y="154" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="700" class="mono">RING</text>
+      <text x="717" y="166" text-anchor="middle" fill="#7d8590" font-size="7.4" class="mono">32K</text>
+
+      <!-- Center Interconnect Hub -->
+      <polygon points="692,126 700,134 692,142 684,134" fill="#111826" stroke="#22d3ee" stroke-width="1.2"/>
+      <circle cx="692" cy="134" r="2.2" fill="#34d399"/>
+
+      <!-- Die Spec Micro-Engraving -->
+      <text x="692" y="214" text-anchor="middle" fill="#7d8590" font-size="8.5" font-weight="600" letter-spacing="0.8" class="mono">SM_120 · 26 SMs · 312.6 GB/s D2D</text>
+    </g>
+  </g>
+
+  <!-- Crisp Outer Frame + Precision CAD Corner Brackets -->
+  <rect x="1" y="1" width="848" height="233" rx="10" fill="none" stroke="#263244" stroke-width="1.1"/>
+  <path d="M 8 18 V 8 H 18 M 8 217 V 227 H 18 M 832 8 H 842 V 18 M 832 227 H 842 V 217" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="square" stroke-opacity="0.72"/>
+</svg>

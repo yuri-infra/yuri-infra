@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 310" width="850" height="310" role="img" aria-label="RTX 5060 Log-Log Roofline Plot and Systems Telemetry">
+  <defs>
+    <linearGradient id="rfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1520"/>
+      <stop offset="100%" stop-color="#0b1018"/>
+    </linearGradient>
+    <linearGradient id="memShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cmpShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="roofStroke" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="76%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <pattern id="rfGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#182232" stroke-width="0.6" stroke-opacity="0.55"/>
+    </pattern>
+    <clipPath id="rfClip">
+      <rect x="1" y="1" width="848" height="308" rx="10"/>
+    </clipPath>
+    <clipPath id="plotClip">
+      <rect x="62.0" y="54.0" width="412.0" height="202.0"/>
+    </clipPath>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+    @keyframes roofPulse {
+      0% { stroke-dashoffset: 310; }
+      100% { stroke-dashoffset: -210; }
+    }
+    @keyframes heroRipple {
+      0% { r: 5; stroke-opacity: 0.9; }
+      100% { r: 15; stroke-opacity: 0; }
+    }
+    .roofTracer { stroke-dasharray: 44 476; animation: roofPulse 4.2s linear infinite; }
+    .ripple { animation: heroRipple 2.4s ease-out infinite; }
+  </style>
+
+  <g clip-path="url(#rfClip)">
+    <rect x="0" y="0" width="850" height="310" fill="url(#rfBg)"/>
+    <rect x="0" y="0" width="850" height="310" fill="url(#rfGrid)"/>
+
+    <!-- Header Strip -->
+    <rect x="24" y="17" width="6" height="6" rx="1" fill="#22d3ee"/>
+    <text x="36" y="23.5" fill="#f0f6fc" font-size="10" font-weight="700" letter-spacing="0.6" class="mono">EMPIRICAL GPU ROOFLINE <tspan fill="#7d8590" font-weight="400">· RTX 5060 (8GB, SM_120)</tspan></text>
+    <text x="826" y="23.5" text-anchor="end" fill="#34d399" font-size="9.2" font-weight="700" letter-spacing="0.4" class="mono">● 5-RUN ABA MEDIAN · MEASURED CEILINGS</text>
+    <line x1="20" y1="36" x2="830" y2="36" stroke="#1c2533" stroke-width="1"/>
+
+    <!-- Vertical Pane Divider -->
+    <line x1="492" y1="46" x2="492" y2="294" stroke="#1c2533" stroke-width="1"/>
+
+    <!-- ================= LEFT PANE: LOG-LOG ROOFLINE ================= -->
+    <g>
+      <!-- Plot Frame Background -->
+      <rect x="62.0" y="54.0" width="412.0" height="202.0" fill="#0b111b" stroke="#263244" stroke-width="1"/>
+
+      <!-- Shaded Memory-Bound vs Compute-Bound Regimes -->
+      <g clip-path="url(#plotClip)">
+        <polygon points="62.0,256.0 62.0,229.0 409.2,77.1 409.2,256.0" fill="url(#memShade)"/>
+        <polygon points="409.2,256.0 409.2,77.1 474.0,77.1 474.0,256.0" fill="url(#cmpShade)"/>
+      </g>
+
+      <!-- Log-Log Grid & Axis Ticks -->
+      <line x1="74.1" y1="54.0" x2="74.1" y2="256.0" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="74.1" y="270.0" text-anchor="middle" fill="#7d8590" font-size="8.6" class="mono">0.1</text>
+      <line x1="198.9" y1="54.0" x2="198.9" y2="256.0" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="198.9" y="270.0" text-anchor="middle" fill="#7d8590" font-size="8.6" class="mono">1</text>
+      <line x1="323.7" y1="54.0" x2="323.7" y2="256.0" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="323.7" y="270.0" text-anchor="middle" fill="#7d8590" font-size="8.6" class="mono">10</text>
+      <line x1="409.2" y1="77.1" x2="409.2" y2="256.0" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.72"/>
+      <text x="409.2" y="270.0" text-anchor="middle" fill="#a78bfa" font-size="8.6" font-weight="700" class="mono">48.4</text>
+      <line x1="448.5" y1="54.0" x2="448.5" y2="256.0" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="448.5" y="270.0" text-anchor="middle" fill="#7d8590" font-size="8.6" class="mono">100</text>
+      <line x1="62.0" y1="250.7" x2="474.0" y2="250.7" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="55.0" y="253.7" text-anchor="end" fill="#7d8590" font-size="8.6" class="mono">0.01</text>
+      <line x1="62.0" y1="196.1" x2="474.0" y2="196.1" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="55.0" y="199.1" text-anchor="end" fill="#7d8590" font-size="8.6" class="mono">0.1</text>
+      <line x1="62.0" y1="141.5" x2="474.0" y2="141.5" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="55.0" y="144.5" text-anchor="end" fill="#7d8590" font-size="8.6" class="mono">1</text>
+      <line x1="62.0" y1="86.9" x2="474.0" y2="86.9" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="55.0" y="89.9" text-anchor="end" fill="#7d8590" font-size="8.6" class="mono">10</text>
+      <line x1="62.0" y1="60.8" x2="474.0" y2="60.8" stroke="#1c2533" stroke-width="0.8" stroke-opacity="0.8"/>
+      <text x="55.0" y="63.8" text-anchor="end" fill="#7d8590" font-size="8.6" class="mono">30</text>
+
+      <!-- Regime Zone Watermarks -->
+      <text x="326" y="248" text-anchor="middle" fill="#7d8590" font-size="8.2" font-weight="700" letter-spacing="1.2" opacity="0.58" class="mono">MEMORY-BOUND</text>
+      <text x="441" y="248" text-anchor="middle" fill="#a78bfa" font-size="8.0" font-weight="700" letter-spacing="0.9" opacity="0.68" class="mono">COMPUTE</text>
+
+      <!-- Roofline Ceilings (Clipped to Plot) -->
+      <g clip-path="url(#plotClip)">
+        <!-- Nominal GDDR7 Spec 384 GB/s Dashed Reference -->
+        <line x1="62.0" y1="224.1" x2="427.4" y2="64.2" stroke="#7d8590" stroke-width="1.1" stroke-dasharray="4 4" stroke-opacity="0.58"/>
+        <!-- Solid Measured D2D + Sustained E2E Compute Roofline -->
+        <polyline points="62.0,229.0 409.2,77.1 474.0,77.1" fill="none" stroke="url(#roofStroke)" stroke-width="2.3" stroke-linejoin="round"/>
+        <!-- Animated Tracer Pulse Along Roofline -->
+        <polyline points="62.0,229.0 409.2,77.1 474.0,77.1" fill="none" stroke="#34d399" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)" class="roofTracer"/>
+      </g>
+
+      <!-- Roofline Ceiling Annotations (Zero Overlap) -->
+      <text transform="translate(273.9,115.0) rotate(-23.63)" text-anchor="middle" fill="#7d8590" font-size="7.6" class="mono">Nominal GDDR7 384 GB/s</text>
+      <text transform="translate(296.2,121.9) rotate(-23.63)" text-anchor="middle" fill="#34d399" font-size="7.8" font-weight="700" class="mono">Measured D2D 312.6 GB/s (81.4%)</text>
+      <text x="468" y="68" text-anchor="end" fill="#a78bfa" font-size="8.2" font-weight="700" class="mono">Sustained E2E: 15.13 TFLOPS (SAC S=4096)</text>
+
+      <!-- Ridge Marker Badge -->
+      <circle cx="409.2" cy="77.1" r="3.2" fill="#0f1520" stroke="#a78bfa" stroke-width="1.5"/>
+
+      <!-- POINT 1: Amber — M=1 Decode Launch-Bound -->
+      <line x1="121.5" y1="228.0" x2="143.5" y2="230.0" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.8"/>
+      <circle cx="121.5" cy="228.0" r="4.2" fill="#f59e0b" stroke="#0f1520" stroke-width="1.4"/>
+      <text x="147.5" y="229.0" fill="#f59e0b" font-size="8.4" font-weight="700" class="mono">M=1 Decode RoPE/Norm</text>
+      <text x="147.5" y="240.0" fill="#7d8590" font-size="7.8" class="mono">11.6 / 13.8 μs (launch)</text>
+
+      <!-- POINT 2: HERO Emerald — FusedAddRMSNorm .cu ON D2D Roof (99.5%) -->
+      <line x1="183.3" y1="176.0" x2="164" y2="122" stroke="#34d399" stroke-width="1.15"/>
+      <rect x="68" y="88" width="166" height="34" rx="5" fill="#06281e" stroke="#34d399" stroke-width="1"/>
+      <text x="76" y="102" fill="#34d399" font-size="8.5" font-weight="700" class="mono">FusedAddRMSNorm (.cu)</text>
+      <text x="76" y="114.5" fill="#f0f6fc" font-size="8.3" font-weight="700" class="mono">311.0 GB/s · 99.5% D2D</text>
+      <circle cx="183.3" cy="176.0" r="8" fill="none" stroke="#34d399" stroke-width="1.3" class="ripple"/>
+      <circle cx="183.3" cy="176.0" r="5.2" fill="#34d399" stroke="#0f1520" stroke-width="1.6" filter="url(#glow)"/>
+
+      <!-- POINT 3: Cyan — PagedAttn Split-KV (7:1 GQA Reuse) -->
+      <polyline points="300.4,133.2 308.4,167" fill="none" stroke="#22d3ee" stroke-width="1"/>
+      <circle cx="300.4" cy="133.2" r="4.4" fill="#22d3ee" stroke="#0f1520" stroke-width="1.4"/>
+      <rect x="268" y="167" width="128" height="30" rx="4" fill="#072430" stroke="#155e75" stroke-width="0.9"/>
+      <text x="275" y="180" fill="#22d3ee" font-size="8.3" font-weight="700" class="mono">PagedAttn Split-KV</text>
+      <text x="275" y="191" fill="#c9d1d9" font-size="7.8" class="mono">65.4 μs · 1.76× SDPA</text>
+
+      <!-- POINT 4: Violet — SAC + Triton FA2 ON Compute Ceiling -->
+      <line x1="424.3" y1="77.1" x2="424.3" y2="114" stroke="#a78bfa" stroke-width="1"/>
+      <circle cx="424.3" cy="77.1" r="4.6" fill="#a78bfa" stroke="#0f1520" stroke-width="1.5" filter="url(#glow)"/>
+      <rect x="358" y="114" width="110" height="30" rx="4" fill="#1d1338" stroke="#4c1d95" stroke-width="0.9"/>
+      <text x="364" y="127" fill="#a78bfa" font-size="8.2" font-weight="700" class="mono">SAC + Triton FA2</text>
+      <text x="364" y="138" fill="#c9d1d9" font-size="7.7" class="mono">15.13 TF · 32K ctx</text>
+
+      <!-- Axis Titles -->
+      <text x="268.0" y="289" text-anchor="middle" fill="#7d8590" font-size="9" font-weight="600" class="mono">Operational Intensity I (FLOP / Byte) · Log₁₀ Scale</text>
+      <text transform="translate(21, 155.0) rotate(-90)" text-anchor="middle" fill="#7d8590" font-size="9" font-weight="600" class="mono">Attained Perf (TFLOP/s)</text>
+    </g>
+
+    <!-- ================= RIGHT PANE: SYSTEMS SPEC SHEET ================= -->
+    <g>
+      <text x="508" y="60" fill="#22d3ee" font-size="9.6" font-weight="700" letter-spacing="0.9" class="mono">SYSTEMS TELEMETRY</text>
+      <text x="826" y="60" text-anchor="end" fill="#7d8590" font-size="9" class="mono">yuri-infra@fudan</text>
+      <line x1="508" y1="68" x2="826" y2="68" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.45"/>
+
+      <text x="508" y="89.0" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">M.Eng.</text><text x="572" y="89.0" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="89.0" fill="#c9d1d9" font-size="9.4" class="mono">Fudan Univ. · Electronic Info (2026–29)</text>
+      <line x1="508" y1="97.0" x2="826" y2="97.0" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="111.5" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">B.Eng.</text><text x="572" y="111.5" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="111.5" fill="#c9d1d9" font-size="9.4" class="mono">Tiangong Univ. · Rank 1/59 (GPA 3.92)</text>
+      <line x1="508" y1="119.5" x2="826" y2="119.5" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="134.0" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">Kernels</text><text x="572" y="134.0" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="134.0" fill="#c9d1d9" font-size="9.4" class="mono">CUDA C++ (.cu) · PTX/SASS · Triton</text>
+      <line x1="508" y1="142.0" x2="826" y2="142.0" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="156.5" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">Compiler</text><text x="572" y="156.5" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="156.5" fill="#c9d1d9" font-size="9.4" class="mono">PyTorch 2.x · Core ATen · Inductor</text>
+      <line x1="508" y1="164.5" x2="826" y2="164.5" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="179.0" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">Systems</text><text x="572" y="179.0" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="179.0" fill="#c9d1d9" font-size="9.4" class="mono">PagedAttn · Radix-Tree · Ring Attn</text>
+      <line x1="508" y1="187.0" x2="826" y2="187.0" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="201.5" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">Profiling</text><text x="572" y="201.5" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="201.5" fill="#c9d1d9" font-size="9.4" class="mono">Roofline · cuobjdump · torch.profiler</text>
+      <line x1="508" y1="209.5" x2="826" y2="209.5" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="224.0" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">Research</text><text x="572" y="224.0" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="224.0" fill="#c9d1d9" font-size="9.4" class="mono">IEEE/RSJ IROS '25 (Corr. Author/Rev.)</text>
+      <line x1="508" y1="232.0" x2="826" y2="232.0" stroke="#1c2533" stroke-width="0.7" stroke-opacity="0.75"/>
+      <text x="508" y="246.5" fill="#22d3ee" font-size="9.5" font-weight="700" class="mono">Industry</text><text x="572" y="246.5" fill="#7d8590" font-size="9.5" class="mono">:</text><text x="583" y="246.5" fill="#c9d1d9" font-size="9.4" class="mono">Uniview · Embedded C Intern (6 mos)</text>
+
+      <!-- Bottom Hardware Spec Capsule -->
+      <rect x="508" y="268" width="318" height="24" rx="5" fill="#161b22" stroke="#1c2533" stroke-width="1"/>
+      <circle cx="520" cy="280" r="2.8" fill="#34d399"/>
+      <text x="530" y="283.2" fill="#7d8590" font-size="8.6" font-weight="600" class="mono">HW: RTX 5060 Laptop (8GB · 26 SMs · 312.6 GB/s)</text>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="848" height="308" rx="10" fill="none" stroke="#263244" stroke-width="1.1"/>
+  <path d="M 8 18 V 8 H 18 M 8 292 V 302 H 18 M 832 8 H 842 V 18 M 832 302 H 842 V 292" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="square" stroke-opacity="0.72"/>
+</svg>

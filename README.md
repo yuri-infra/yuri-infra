@@ -1,43 +1,61 @@
-<div align="center">
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/hero-light.svg">
+    <img alt="Hongwei Zhu — yuri-infra GPU Systems & Compilers Lab" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/hero-light.svg" width="100%">
+  </picture>
+</p>
 
-![Hongwei Zhu // yuri-infra AI Infra Banner](./assets/banner.svg)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-light.svg">
+    <img alt="RTX 5060 Empirical Log-Log Roofline and Systems Telemetry" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/roofline-telemetry-light.svg" width="100%">
+  </picture>
+</p>
 
-</div>
+### `// FEATURED_SYSTEMS`
 
-<br/>
+<p align="center">
+  <a href="https://github.com/yuri-infra/fused-cuda-triton-inductor">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-1-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-1-light.svg">
+      <img alt="01 fused-cuda-triton-inductor — CUDA C++ & Triton Kernels + TorchInductor Passes" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-1-light.svg" width="100%">
+    </picture>
+  </a>
+</p>
 
-<div align="center">
+<p align="center">
+  <a href="https://github.com/yuri-infra/qwen-paged-serving">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-2-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-2-light.svg">
+      <img alt="02 qwen-paged-serving — GQA PagedAttention, Radix-Tree & Chunked-Prefill Serving Engine" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-2-light.svg" width="100%">
+    </picture>
+  </a>
+</p>
 
-![System Telemetry & Neofetch](./assets/neofetch.svg)
+<p align="center">
+  <a href="https://github.com/yuri-infra/qwen-32k-longctx-train">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-3-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-3-light.svg">
+      <img alt="03 qwen-32k-longctx-train — Single-8GB 32K Training with ZigZag Ring Attention & SAC" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/card-3-light.svg" width="100%">
+    </picture>
+  </a>
+</p>
 
-</div>
-
-<br/>
-
-<div align="center">
-
-![RTX 5060 Ground-Truth Benchmarks](./assets/benchmarks.svg)
-
-</div>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake.svg">
+    <img alt="yuri-infra Animated Contribution Grid Snake" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/output/github-contribution-grid-snake.svg" width="100%">
+  </picture>
+</p>
 
 ---
 
-### `// REPOSITORY_MATRIX`
-
-| # | Repository | Stack | Core Engineering Highlights |
-| :-: | :--- | :--- | :--- |
-| **`01`** | [**`fused-cuda-triton-inductor`**](https://github.com/yuri-infra/fused-cuda-triton-inductor) | `CUDA C++ (.cu)` · `Triton` · `TorchInductor` · `c10::Dispatcher` | Native `uint4` vectorized `FusedAddRMSNorm` (**311.0 GB/s**, **99.5% D2D**, `cuobjdump` verified `80 ld.v4 / 140 shfl.bfly`); dual-grid single-launch GQA RoPE (**1.40x vs compile**); cache-isolated Core ATen Post-Grad 2-stage passes; `fullgraph=True` 128K Chunked Linear+CE (**-74.2% VRAM**). |
-| **`02`** | [**`qwen-paged-serving`**](https://github.com/yuri-infra/qwen-paged-serving) | `Triton PagedAttention` · `Radix-Tree` · `Chunked-Prefill` · `asyncio` | 24-layer `Qwen2.5-0.5B-Instruct` serving engine: 7:1 GQA `BLOCK_G=16` Tensor Core Split-KV PagedAttention (**1.76x** vs SDPA); cross-project `.cu`/Triton fusion cutting launches **814 → 400 (-50.9%)**; `O(log N)` edge-splitting Radix-Tree + LIFO Swap (**ITL P99 -90.5%**, **7.37x** 24-way throughput, **0.63%** KV frag). |
-| **`03`** | [**`qwen-32k-longctx-train`**](https://github.com/yuri-infra/qwen-32k-longctx-train) | `Triton FA2` · `ZigZag Ring Attn` · `SAC` · `Pinned Async DMA` | Single-8GB-GPU **32K (32x)** steady-state training for `Qwen2.5-0.5B`: zero-`atomic_add` Triton FA2; multi-process ZigZag Ring Attention (`P=4` imbalance **6.99x → 1.00x**, bwd max err `8.58e-6`); intra-layer SAC (**-80.6% VRAM** @ 15.13 TFLOPS); 152K in-place `addmm_` Chunked CE (**520 MB** @ 16K); dual-stream pinned async offload. |
-
----
-
-### `// CONNECT`
-
-```text
-$ cat ~/.contact
-email      : zhuhw26@m.fudan.edu.cn
-location   : Shanghai, China (Fudan University · M.Eng.)
-available  : Dec 2026+ · 3–6 months (4–5 days/week)
-focus      : AI Infra Intern — GPU Kernels / Compilers / LLM Inference / Distributed Training
-```
+<p align="center">
+  <a href="mailto:zhuhw26@m.fudan.edu.cn"><strong>zhuhw26@m.fudan.edu.cn</strong></a> &nbsp;·&nbsp; Shanghai, China (Fudan Univ. M.Eng.) &nbsp;·&nbsp; Available Dec 2026+ (3–6 mos, 4–5 d/wk) &nbsp;·&nbsp; GPU Kernels · Compilers · LLM Systems
+</p>
