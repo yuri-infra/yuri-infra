@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 258" width="850" height="258" role="img" aria-label="RTX 5060 AI Infra Telemetry Benchmarks">
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <!-- Card Frame -->
+  <rect x="1" y="1" width="848" height="256" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.3"/>
+  <rect x="1" y="1" width="848" height="32" rx="12" fill="#161b22"/>
+  <rect x="1" y="20" width="848" height="13" fill="#161b22"/>
+  <line x1="1" y1="33" x2="849" y2="33" stroke="#30363d" stroke-width="1"/>
+  <text x="20" y="21" font-size="11" class="mono">
+    <tspan fill="#3fb950" font-weight="700">$</tspan>
+    <tspan fill="#8b949e"> ./bench_telemetry.py --device="RTX 5060 (8GB)" --runs=5 --protocol=ABA</tspan>
+  </text>
+  <text x="830" y="21" text-anchor="end" fill="#3fb950" font-size="10" font-weight="600" class="mono">● VERIFIED MEDIAN</text>
+
+  <!-- Panel 1: Kernels & Compiler -->
+  <g>
+    <rect x="20" y="47" width="260" height="196" rx="8" fill="#11161f" stroke="#263042" stroke-width="1"/>
+    <rect x="20" y="47" width="260" height="3" rx="1.5" fill="#3fb950"/>
+    <text x="36" y="70" fill="#3fb950" font-size="10.8" font-weight="700" class="mono">01 // KERNELS &amp; INDUCTOR</text>
+    <text x="36" y="94" fill="#c9d1d9" font-size="10.5" class="mono">FusedAddRMSNorm HBM</text>
+    <text x="264" y="94" text-anchor="end" fill="#3fb950" font-size="10.8" font-weight="700" class="mono">99.5% D2D</text>
+    <rect x="36" y="100" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="36" y="100" width="227" height="6" rx="3" fill="#3fb950" opacity="0.92"/>
+    <text x="36" y="117" fill="#6e7681" font-size="9.2" class="mono">311.0 / 312.6 GB/s · M=1 13.8 μs</text>
+    <text x="36" y="138" fill="#c9d1d9" font-size="10.5" class="mono">Dual-Grid GQA RoPE</text>
+    <text x="264" y="138" text-anchor="end" fill="#3fb950" font-size="10.8" font-weight="700" class="mono">1.40x compile</text>
+    <rect x="36" y="144" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="36" y="144" width="192" height="6" rx="3" fill="#3fb950" opacity="0.92"/>
+    <text x="36" y="161" fill="#6e7681" font-size="9.2" class="mono">11.6 μs B=1 Decode · 12.0x Eager</text>
+    <text x="36" y="182" fill="#c9d1d9" font-size="10.5" class="mono">128K Chunked CE</text>
+    <text x="264" y="182" text-anchor="end" fill="#3fb950" font-size="10.8" font-weight="700" class="mono">-74.2% VRAM</text>
+    <rect x="36" y="188" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="36" y="188" width="169" height="6" rx="3" fill="#3fb950" opacity="0.92"/>
+    <text x="36" y="205" fill="#6e7681" font-size="9.2" class="mono">0.99x speed · FP16 zeroing &gt;96%→11%</text>
+    <line x1="36" y1="218" x2="264" y2="218" stroke="#21262d" stroke-width="1"/>
+    <text x="36" y="233" fill="#8b949e" font-size="9.2" class="mono">PTX: 80 ld.v4 · 140 shfl.bfly</text>
+  </g>
+
+  <!-- Panel 2: LLM Serving Engine -->
+  <g>
+    <rect x="295" y="47" width="260" height="196" rx="8" fill="#11161f" stroke="#263042" stroke-width="1"/>
+    <rect x="295" y="47" width="260" height="3" rx="1.5" fill="#39c5cf"/>
+    <text x="311" y="70" fill="#39c5cf" font-size="10.8" font-weight="700" class="mono">02 // LLM SERVING ENGINE</text>
+    <text x="311" y="94" fill="#c9d1d9" font-size="10.5" class="mono">24-Way Multi-Turn</text>
+    <text x="539" y="94" text-anchor="end" fill="#39c5cf" font-size="10.8" font-weight="700" class="mono">7.37x</text>
+    <rect x="311" y="100" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="311" y="100" width="214" height="6" rx="3" fill="#39c5cf" opacity="0.92"/>
+    <text x="311" y="117" fill="#6e7681" font-size="9.2" class="mono">114 → 840 tok/s · 83.8% Radix hit</text>
+    <text x="311" y="138" fill="#c9d1d9" font-size="10.5" class="mono">Burst ITL P99 Drop</text>
+    <text x="539" y="138" text-anchor="end" fill="#39c5cf" font-size="10.8" font-weight="700" class="mono">-90.5%</text>
+    <rect x="311" y="144" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="311" y="144" width="206" height="6" rx="3" fill="#39c5cf" opacity="0.92"/>
+    <text x="311" y="161" fill="#6e7681" font-size="9.2" class="mono">289.0 → 27.5 ms · Chunked-Prefill</text>
+    <text x="311" y="182" fill="#c9d1d9" font-size="10.5" class="mono">Kernel Launches</text>
+    <text x="539" y="182" text-anchor="end" fill="#39c5cf" font-size="10.8" font-weight="700" class="mono">-50.9%</text>
+    <rect x="311" y="188" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="311" y="188" width="116" height="6" rx="3" fill="#39c5cf" opacity="0.92"/>
+    <text x="311" y="205" fill="#6e7681" font-size="9.2" class="mono">814 → 400 / step · TTFT -23.0%</text>
+    <line x1="311" y1="218" x2="539" y2="218" stroke="#21262d" stroke-width="1"/>
+    <text x="311" y="233" fill="#8b949e" font-size="9.2" class="mono">KV Frag: 0.63% · SSE jitter 2.5ms</text>
+  </g>
+
+  <!-- Panel 3: 32K Long-Context Training -->
+  <g>
+    <rect x="570" y="47" width="260" height="196" rx="8" fill="#11161f" stroke="#263042" stroke-width="1"/>
+    <rect x="570" y="47" width="260" height="3" rx="1.5" fill="#a371f7"/>
+    <text x="586" y="70" fill="#a371f7" font-size="10.8" font-weight="700" class="mono">03 // 32K LONG-CTX TRAIN</text>
+    <text x="586" y="94" fill="#c9d1d9" font-size="10.5" class="mono">Single-8GB Context</text>
+    <text x="814" y="94" text-anchor="end" fill="#a371f7" font-size="10.8" font-weight="700" class="mono">32K (32x)</text>
+    <rect x="586" y="100" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="586" y="100" width="219" height="6" rx="3" fill="#a371f7" opacity="0.92"/>
+    <text x="586" y="117" fill="#6e7681" font-size="9.2" class="mono">1K → 32K · 2-step steady state</text>
+    <text x="586" y="138" fill="#c9d1d9" font-size="10.5" class="mono">Intra-Layer SAC</text>
+    <text x="814" y="138" text-anchor="end" fill="#a371f7" font-size="10.8" font-weight="700" class="mono">-80.6% VRAM</text>
+    <rect x="586" y="144" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="586" y="144" width="184" height="6" rx="3" fill="#a371f7" opacity="0.92"/>
+    <text x="586" y="161" fill="#6e7681" font-size="9.2" class="mono">3813 → 739 MB · 15.13 TFLOPS</text>
+    <text x="586" y="182" fill="#c9d1d9" font-size="10.5" class="mono">152K Chunked CE</text>
+    <text x="814" y="182" text-anchor="end" fill="#a371f7" font-size="10.8" font-weight="700" class="mono">-93%+ VRAM</text>
+    <rect x="586" y="188" width="228" height="6" rx="3" fill="#21262d"/>
+    <rect x="586" y="188" width="212" height="6" rx="3" fill="#a371f7" opacity="0.92"/>
+    <text x="586" y="205" fill="#6e7681" font-size="9.2" class="mono">520 MB bwd workspace @ S=16K</text>
+    <line x1="586" y1="218" x2="814" y2="218" stroke="#21262d" stroke-width="1"/>
+    <text x="586" y="233" fill="#8b949e" font-size="9.2" class="mono">ZigZag P=4: 6.99x→1.00x · DMA Hide</text>
+  </g>
+</svg>
