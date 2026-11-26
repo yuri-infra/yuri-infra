@@ -1,117 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 156" width="850" height="156" role="img" aria-label="qwen-paged-serving project architecture card">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 172" width="880" height="172" role="img" aria-label="qwen-paged-serving architecture blueprint card">
   <defs>
     <linearGradient id="cBg_02" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f1520"/>
-      <stop offset="100%" stop-color="#0b1018"/>
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#080d17"/>
     </linearGradient>
     <pattern id="dGrid_02" width="16" height="16" patternUnits="userSpaceOnUse">
-      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#182232" stroke-width="0.6" stroke-opacity="0.55"/>
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#152136" stroke-width="0.6" stroke-opacity="0.65"/>
     </pattern>
-    <clipPath id="cClip_02">
-      <rect x="1" y="1" width="848" height="154" rx="10"/>
-    </clipPath>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <clipPath id="cClip_02"><rect x="1" y="1" width="878" height="170" rx="12"/></clipPath>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
-    @keyframes rxFlow1 { 0% { stroke-dashoffset: 140; } 100% { stroke-dashoffset: -40; } }
-    @keyframes rxFlow2 { 0% { stroke-dashoffset: 105; } 100% { stroke-dashoffset: -75; } }
-    @keyframes swapPulse { 0% { stroke-dashoffset: 36; } 100% { stroke-dashoffset: 0; } }
-    .rx1 { stroke-dasharray: 24 156; animation: rxFlow1 2.6s linear infinite; }
-    .rx2 { stroke-dasharray: 22 158; animation: rxFlow2 3.1s linear infinite; }
-    .swp { stroke-dasharray: 6 6; animation: swapPulse 1.4s linear infinite; }
+
+    
+    @keyframes rx1 { 0% { stroke-dashoffset: 155; } 100% { stroke-dashoffset: -45; } }
+    @keyframes rx2 { 0% { stroke-dashoffset: 115; } 100% { stroke-dashoffset: -85; } }
+    @keyframes swp { 0% { stroke-dashoffset: 36; } 100% { stroke-dashoffset: 0; } }
+    .rx1 { stroke-dasharray: 24 176; animation: rx1 2.5s linear infinite; }
+    .rx2 { stroke-dasharray: 22 178; animation: rx2 3.0s linear infinite; }
+    .swp { stroke-dasharray: 6 6; animation: swp 1.3s linear infinite; }
+    
   </style>
 
   <g clip-path="url(#cClip_02)">
-    <rect x="0" y="0" width="850" height="156" fill="url(#cBg_02)"/>
-    <!-- 4px Domain Color Spine -->
-    <rect x="0" y="0" width="5.5" height="156" fill="#22d3ee"/>
+    <rect x="0" y="0" width="880" height="172" fill="url(#cBg_02)"/>
+    <!-- Left Domain Accent Spine -->
+    <rect x="0" y="0" width="6" height="172" fill="#00e5ff"/>
 
-    <!-- Left 300x132 Bespoke Animated Micro-Diagram Well -->
-    <rect x="18" y="12" width="300" height="132" rx="7" fill="#0b111b" stroke="#1c2533" stroke-width="1"/>
-    <rect x="19" y="13" width="298" height="130" rx="6" fill="url(#dGrid_02)"/>
-    <text x="28" y="25" fill="#22d3ee" font-size="7.8" font-weight="700" letter-spacing="0.7" class="mono">RADIX-TREE → PAGED KV</text>
+    <!-- Left 326x146 Deep Obsidian OLED Micro-Display (High Contrast in BOTH Light & Dark!) -->
+    <rect x="18" y="13" width="324" height="146" rx="8" fill="#070c16" stroke="#1b283d" stroke-width="1.2"/>
+    <rect x="19" y="14" width="322" height="144" rx="7" fill="url(#dGrid_02)"/>
+    <text x="29" y="28" fill="#00e5ff" font-size="8.1" font-weight="700" letter-spacing="0.65" class="mono">RADIX-TREE → PAGED KV</text>
+    <text x="332" y="28" text-anchor="end" fill="#7d8fa6" font-size="7.6" font-weight="600" class="mono">16-TOK · 0.63% FRAG</text>
     <g>
       <!-- Radix-Tree Static Base Edges -->
-      <path d="M 56 58 H 104 L 136 44 H 178" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-opacity="0.36" stroke-linejoin="round"/>
-      <path d="M 56 58 H 104 L 136 74 H 178" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-opacity="0.36" stroke-linejoin="round"/>
-      <path d="M 56 58 L 86 106 H 134" fill="none" stroke="#7d8590" stroke-width="1.2" stroke-opacity="0.45" stroke-dasharray="3 2"/>
+      <path d="M 60 66 H 112 L 146 52 H 192" fill="none" stroke="#00e5ff" stroke-width="1.6" stroke-opacity="0.34" stroke-linejoin="round"/>
+      <path d="M 60 66 H 112 L 146 82 H 192" fill="none" stroke="#00e5ff" stroke-width="1.6" stroke-opacity="0.34" stroke-linejoin="round"/>
+      <path d="M 60 66 L 90 120 H 146" fill="none" stroke="#64748b" stroke-width="1.2" stroke-opacity="0.5" stroke-dasharray="3 2.5"/>
 
       <!-- Animated Glowing Prefix Lookup Packets -->
-      <path d="M 56 58 H 104 L 136 44 H 178" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="rx1"/>
-      <path d="M 56 58 H 104 L 136 74 H 178" fill="none" stroke="#34d399" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="rx2"/>
+      <path d="M 60 66 H 112 L 146 52 H 192" fill="none" stroke="#00e5ff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="rx1"/>
+      <path d="M 60 66 H 112 L 146 82 H 192" fill="none" stroke="#10f5a0" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="rx2"/>
 
       <!-- Tree Nodes -->
-      <rect x="28" y="48" width="32" height="20" rx="4" fill="#072430" stroke="#22d3ee" stroke-width="1.1"/>
-      <text x="44" y="61" text-anchor="middle" fill="#22d3ee" font-size="7.8" font-weight="700" class="mono">SYS</text>
+      <rect x="28" y="55" width="35" height="22" rx="4.5" fill="#062535" stroke="#00e5ff" stroke-width="1.15"/>
+      <text x="45.5" y="69" text-anchor="middle" fill="#00e5ff" font-size="8.1" font-weight="700" class="mono">SYS</text>
 
-      <rect x="86" y="48" width="36" height="20" rx="4" fill="#072430" stroke="#22d3ee" stroke-width="1.2"/>
-      <text x="104" y="61" text-anchor="middle" fill="#22d3ee" font-size="7.5" font-weight="700" class="mono">CoW</text>
+      <rect x="92" y="55" width="40" height="22" rx="4.5" fill="#062535" stroke="#00e5ff" stroke-width="1.25"/>
+      <text x="112" y="69" text-anchor="middle" fill="#00e5ff" font-size="8.0" font-weight="700" class="mono">CoW</text>
 
-      <circle cx="144" cy="44" r="4" fill="#22d3ee" stroke="#0f1520" stroke-width="1.2"/>
-      <text x="144" y="37" text-anchor="middle" fill="#c9d1d9" font-size="7.2" class="mono">qA</text>
-      <circle cx="144" cy="74" r="4" fill="#34d399" stroke="#0f1520" stroke-width="1.2"/>
-      <text x="144" y="87" text-anchor="middle" fill="#c9d1d9" font-size="7.2" class="mono">qB</text>
+      <circle cx="154" cy="52" r="4.3" fill="#00e5ff" stroke="#070c16" stroke-width="1.3"/>
+      <text x="154" y="44" text-anchor="middle" fill="#cbd5e1" font-size="7.6" class="mono">qA</text>
+      <circle cx="154" cy="82" r="4.3" fill="#10f5a0" stroke="#070c16" stroke-width="1.3"/>
+      <text x="154" y="96" text-anchor="middle" fill="#cbd5e1" font-size="7.6" class="mono">qB</text>
 
-      <rect x="108" y="97" width="44" height="18" rx="3.5" fill="#161b22" stroke="#263244" stroke-width="0.9"/>
-      <text x="130" y="109" text-anchor="middle" fill="#7d8590" font-size="7.2" class="mono">evict</text>
+      <rect x="108" y="110" width="54" height="20" rx="4" fill="#0f172a" stroke="#25364f" stroke-width="0.9"/>
+      <text x="135" y="123" text-anchor="middle" fill="#94a3b8" font-size="7.6" class="mono">heapq</text>
 
-      <!-- Non-Contiguous 16-tok KV Block Pool -->
-      <text x="308" y="25" text-anchor="end" fill="#7d8590" font-size="7.2" font-weight="600" class="mono">16-TOK PAGES · 0.63% FRAG</text>
-      <rect x="180" y="36" width="27" height="20" rx="3.5" fill="#072430" stroke="#22d3ee" stroke-width="1.2"/><text x="193.5" y="49" text-anchor="middle" fill="#22d3ee" font-size="7.8" font-weight="700" class="mono">P0</text>
-      <rect x="212" y="36" width="27" height="20" rx="3.5" fill="#161b22" stroke="#263244" stroke-width="0.8"/><text x="225.5" y="49" text-anchor="middle" fill="#7d8590" font-size="7.8" font-weight="400" class="mono">P1</text>
-      <rect x="244" y="36" width="27" height="20" rx="3.5" fill="#161b22" stroke="#263244" stroke-width="0.8"/><text x="257.5" y="49" text-anchor="middle" fill="#7d8590" font-size="7.8" font-weight="400" class="mono">P2</text>
-      <rect x="276" y="36" width="27" height="20" rx="3.5" fill="#072430" stroke="#22d3ee" stroke-width="1.2"/><text x="289.5" y="49" text-anchor="middle" fill="#22d3ee" font-size="7.8" font-weight="700" class="mono">P4</text>
-      <rect x="180" y="62" width="27" height="20" rx="3.5" fill="#161b22" stroke="#263244" stroke-width="0.8"/><text x="193.5" y="75" text-anchor="middle" fill="#7d8590" font-size="7.8" font-weight="400" class="mono">P5</text>
-      <rect x="212" y="62" width="27" height="20" rx="3.5" fill="#161b22" stroke="#263244" stroke-width="0.8"/><text x="225.5" y="75" text-anchor="middle" fill="#7d8590" font-size="7.8" font-weight="400" class="mono">P6</text>
-      <rect x="244" y="62" width="27" height="20" rx="3.5" fill="#072430" stroke="#22d3ee" stroke-width="1.2"/><text x="257.5" y="75" text-anchor="middle" fill="#22d3ee" font-size="7.8" font-weight="700" class="mono">P7</text>
-      <rect x="276" y="62" width="27" height="20" rx="3.5" fill="#161b22" stroke="#263244" stroke-width="0.8"/><text x="289.5" y="75" text-anchor="middle" fill="#7d8590" font-size="7.8" font-weight="400" class="mono">P9</text>
+      <!-- Non-Contiguous 16-Tok KV Page Pool -->
+      <rect x="194" y="42" width="30" height="22" rx="4" fill="#062535" stroke="#00e5ff" stroke-width="1.25"/><text x="209" y="56.5" text-anchor="middle" fill="#00e5ff" font-size="8.2" font-weight="700" class="mono">P0</text><rect x="229" y="42" width="30" height="22" rx="4" fill="#0f172a" stroke="#1e2d44" stroke-width="0.9"/><text x="244" y="56.5" text-anchor="middle" fill="#64748b" font-size="8.2" class="mono">P1</text><rect x="264" y="42" width="30" height="22" rx="4" fill="#0f172a" stroke="#1e2d44" stroke-width="0.9"/><text x="279" y="56.5" text-anchor="middle" fill="#64748b" font-size="8.2" class="mono">P2</text><rect x="299" y="42" width="30" height="22" rx="4" fill="#062535" stroke="#00e5ff" stroke-width="1.25"/><text x="314" y="56.5" text-anchor="middle" fill="#00e5ff" font-size="8.2" font-weight="700" class="mono">P4</text><rect x="194" y="70" width="30" height="22" rx="4" fill="#0f172a" stroke="#1e2d44" stroke-width="0.9"/><text x="209" y="84.5" text-anchor="middle" fill="#64748b" font-size="8.2" class="mono">P5</text><rect x="229" y="70" width="30" height="22" rx="4" fill="#0f172a" stroke="#1e2d44" stroke-width="0.9"/><text x="244" y="84.5" text-anchor="middle" fill="#64748b" font-size="8.2" class="mono">P6</text><rect x="264" y="70" width="30" height="22" rx="4" fill="#062535" stroke="#00e5ff" stroke-width="1.25"/><text x="279" y="84.5" text-anchor="middle" fill="#00e5ff" font-size="8.2" font-weight="700" class="mono">P7</text><rect x="299" y="70" width="30" height="22" rx="4" fill="#0f172a" stroke="#1e2d44" stroke-width="0.9"/><text x="314" y="84.5" text-anchor="middle" fill="#64748b" font-size="8.2" class="mono">P9</text>
 
-      <!-- LIFO Async Swap -> CPU Pinned -->
-      <path d="M 238 92 V 110" fill="none" stroke="#f59e0b" stroke-width="1.5" class="swp"/>
-      <text x="246" y="104" fill="#f59e0b" font-size="7.2" font-weight="700" class="mono">LIFO Swap ↕</text>
-      <rect x="180" y="112" width="124" height="22" rx="4" fill="#261805" stroke="#78350f" stroke-width="0.9"/>
-      <text x="242" y="126" text-anchor="middle" fill="#f59e0b" font-size="7.8" font-weight="700" class="mono">CPU Pinned Pool</text>
+      <!-- LIFO Async Swap -->
+      <path d="M 254 98 V 120" fill="none" stroke="#fbbf24" stroke-width="1.6" class="swp"/>
+      <text x="262" y="112" fill="#fbbf24" font-size="7.6" font-weight="700" class="mono">LIFO Swap ↕</text>
+      <rect x="194" y="122" width="135" height="24" rx="4.5" fill="#2b1c06" stroke="#78490b" stroke-width="1"/>
+      <text x="261.5" y="137.5" text-anchor="middle" fill="#fbbf24" font-size="8.1" font-weight="700" class="mono">CPU Pinned Pool</text>
     </g>
 
-    <!-- Right Specification Block -->
+    <!-- Right Specification Panel -->
     <g>
-      <!-- Index Badge + Repo Slug + Explore Pill -->
-      <rect x="338" y="16" width="26" height="19" rx="4" fill="#072430" stroke="#155e75" stroke-width="0.9"/>
-      <text x="351" y="29" text-anchor="middle" fill="#22d3ee" font-size="9.8" font-weight="700" class="mono">02</text>
-      <text x="373" y="30.5" fill="#f0f6fc" font-size="16" font-weight="700" class="mono">qwen-paged-serving</text>
+      <rect x="358" y="17" width="28" height="21" rx="5" fill="#062535" stroke="#0e5872" stroke-width="1"/>
+      <text x="372" y="31.5" text-anchor="middle" fill="#00e5ff" font-size="10.2" font-weight="700" class="mono">02</text>
+      <text x="395" y="33" fill="#f1f5f9" font-size="16.5" font-weight="700" class="mono">qwen-paged-serving</text>
 
-      <rect x="742" y="15" width="86" height="22" rx="11" fill="#072430" stroke="#155e75" stroke-width="1"/>
-      <text x="785" y="29.5" text-anchor="middle" fill="#22d3ee" font-size="9.2" font-weight="700" letter-spacing="0.4" class="mono">EXPLORE ↗</text>
+      <!-- Verified Tests Pill + Explore Pill -->
+      <rect x="698" y="16" width="70" height="22" rx="11" fill="#111a2b" stroke="#1f2e45" stroke-width="0.9"/>
+      <text x="733" y="30.2" text-anchor="middle" fill="#10f5a0" font-size="8.2" font-weight="700" class="mono">8/8 PASS</text>
+
+      <rect x="774" y="16" width="88" height="22" rx="11" fill="#062535" stroke="#0e5872" stroke-width="1"/>
+      <text x="818" y="30.2" text-anchor="middle" fill="#00e5ff" font-size="9.0" font-weight="700" letter-spacing="0.4" class="mono">EXPLORE ↗</text>
 
       <!-- 1-Line Engineering Thesis -->
-      <text x="338" y="52" fill="#c9d1d9" font-size="10.8" class="sans">24L Qwen2.5 serving engine: GQA Tensor Core PagedAttn, Radix-Tree &amp; Chunked-Prefill.</text>
+      <text x="358" y="56" fill="#cbd5e1" font-size="11.0" class="sans">24L Qwen2.5 serving engine: GQA Tensor Core PagedAttn, Radix-Tree &amp; Chunked-Prefill.</text>
 
-      <!-- 3 KPI Micro-Chips -->
-      <rect x="338" y="66" width="158" height="46" rx="6" fill="#161b22" stroke="#1c2533" stroke-width="1"/>
-      <rect x="338" y="66" width="158" height="2.4" rx="1.2" fill="#22d3ee"/>
-      <text x="349" y="86.5" fill="#22d3ee" font-size="13.2" font-weight="700" class="mono">7.37× tok/s</text>
-      <text x="349" y="103" fill="#7d8590" font-size="8.7" class="mono">840 tok/s · 83.8% hit</text>
-      <rect x="504" y="66" width="158" height="46" rx="6" fill="#161b22" stroke="#1c2533" stroke-width="1"/>
-      <text x="515" y="86.5" fill="#f0f6fc" font-size="13.2" font-weight="700" class="mono">-90.5% P99</text>
-      <text x="515" y="103" fill="#7d8590" font-size="8.7" class="mono">289→27.5ms ITL</text>
-      <rect x="670" y="66" width="158" height="46" rx="6" fill="#161b22" stroke="#1c2533" stroke-width="1"/>
-      <text x="681" y="86.5" fill="#f0f6fc" font-size="13.2" font-weight="700" class="mono">-50.9% Launch</text>
-      <text x="681" y="103" fill="#7d8590" font-size="8.7" class="mono">814→400 / step</text>
+      <!-- 3 KPI Chips -->
+      <rect x="358" y="70" width="162" height="52" rx="7" fill="#111a2b" stroke="#1f2e45" stroke-width="1"/><rect x="358" y="70" width="162" height="2.6" rx="1.3" fill="#00e5ff"/><text x="369" y="92" fill="#00e5ff" font-size="13.8" font-weight="700" class="mono">7.37× tok/s</text><text x="369" y="108.5" fill="#7e90a8" font-size="8.7" class="mono">839.9 tok/s · 83.8% hit</text><rect x="369" y="114.5" width="140" height="2.5" rx="1.25" fill="#1b273a"/><rect x="369" y="114.5" width="128" height="2.5" rx="1.25" fill="#00e5ff" opacity="0.88"/><rect x="528" y="70" width="162" height="52" rx="7" fill="#111a2b" stroke="#1f2e45" stroke-width="1"/><rect x="528" y="70" width="162" height="2.6" rx="1.3" fill="#1b273a"/><text x="539" y="92" fill="#f1f5f9" font-size="13.8" font-weight="700" class="mono">-90.5% P99</text><text x="539" y="108.5" fill="#7e90a8" font-size="8.7" class="mono">289→27.45ms ITL</text><rect x="539" y="114.5" width="140" height="2.5" rx="1.25" fill="#1b273a"/><rect x="539" y="114.5" width="126" height="2.5" rx="1.25" fill="#7e90a8" opacity="0.88"/><rect x="698" y="70" width="162" height="52" rx="7" fill="#111a2b" stroke="#1f2e45" stroke-width="1"/><rect x="698" y="70" width="162" height="2.6" rx="1.3" fill="#1b273a"/><text x="709" y="92" fill="#f1f5f9" font-size="13.8" font-weight="700" class="mono">0.63% Frag</text><text x="709" y="108.5" fill="#7e90a8" font-size="8.7" class="mono">down from 35.99%</text><rect x="709" y="114.5" width="140" height="2.5" rx="1.25" fill="#1b273a"/><rect x="709" y="114.5" width="137" height="2.5" rx="1.25" fill="#7e90a8" opacity="0.88"/>
 
-      <!-- Bottom Stack Strip -->
-      <circle cx="342" cy="133" r="3" fill="#22d3ee"/>
-      <text x="352" y="136.5" fill="#7d8590" font-size="9" font-weight="600" class="mono">Triton PagedAttn · Radix-Tree · Chunked-Prefill · LIFO Swap · asyncio SSE</text>
+      <!-- Bottom Tech Stack Strip -->
+      <circle cx="362" cy="144" r="3.2" fill="#00e5ff"/>
+      <text x="372" y="147.5" fill="#7e90a8" font-size="9.1" font-weight="600" class="mono">Triton PagedAttn · Radix-Tree · Chunked-Prefill · LIFO Swap · asyncio SSE</text>
     </g>
   </g>
 
-  <rect x="1" y="1" width="848" height="154" rx="10" fill="none" stroke="#263244" stroke-width="1.1"/>
-  <path d="M 832 8 H 842 V 18 M 832 148 H 842 V 138" fill="none" stroke="#475569" stroke-width="1.4" stroke-linecap="square" stroke-opacity="0.72"/>
+  <rect x="1" y="1" width="878" height="170" rx="12" fill="none" stroke="#1e2c42" stroke-width="1.2"/>
 </svg>
