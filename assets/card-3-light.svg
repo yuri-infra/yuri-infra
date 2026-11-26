@@ -23,6 +23,8 @@
     .rng1 { stroke-dasharray: 36 408; animation: rng1 3.4s linear infinite; }
     .rng2 { stroke-dasharray: 36 408; animation: rng2 3.4s linear infinite; }
     
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
 
   <g clip-path="url(#cClip_03)">
@@ -35,7 +37,7 @@
     <rect x="19" y="14" width="322" height="144" rx="7" fill="url(#dGrid_03)"/>
     <text x="29" y="28" fill="#6d28d9" font-size="8.1" font-weight="700" letter-spacing="0.65" class="mono">ZIGZAG CAUSAL RING · P=4</text>
     <text x="332" y="28" text-anchor="end" fill="#64748b" font-size="7.6" font-weight="600" class="mono">err 8.58e-6</text>
-    <g>
+    <g transform="translate(0, 3.5)">
       <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#6d28d9" stroke-width="1.9" stroke-opacity="0.42"/>
       <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#6d28d9" stroke-width="2.6" stroke-linecap="round" filter="url(#glow)" class="rng1"/>
       <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" filter="url(#glow)" class="rng2"/>

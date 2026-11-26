@@ -23,8 +23,8 @@
     </linearGradient>
     <linearGradient id="scopeSweep" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
-      <stop offset="85%" stop-color="#00e5ff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.45"/>
+      <stop offset="92%" stop-color="#00e5ff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.42"/>
     </linearGradient>
     <clipPath id="leftClip"><rect x="1" y="1" width="504" height="332" rx="12"/></clipPath>
     <clipPath id="rightClip"><rect x="520" y="1" width="359" height="332" rx="12"/></clipPath>
@@ -46,6 +46,8 @@
     .ripple { animation: heroRipple 2.2s ease-out infinite; }
     .sweep { animation: scopeMove 6.5s linear infinite; }
     .cursor { animation: blink 1.05s step-end infinite; }
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
 
   <!-- ==================== LEFT BENTO CARD: ROOFLINE OSCILLOSCOPE ==================== -->
@@ -67,7 +69,7 @@
     <g clip-path="url(#plotClip)">
       <polygon points="62.0,272.0 62.0,244.5 410.9,90.3 410.9,272.0" fill="url(#memShade)"/>
       <polygon points="410.9,272.0 410.9,90.3 476.0,90.3 476.0,272.0" fill="url(#cmpShade)"/>
-      <rect x="18.0" y="64.0" width="44" height="208.0" fill="url(#scopeSweep)" class="sweep"/>
+      <g class="sweep"><rect x="34.0" y="64.0" width="28" height="208.0" fill="url(#scopeSweep)"/><line x1="62.0" y1="64.0" x2="62.0" y2="272.0" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.65"/></g>
     </g>
 
     <!-- Log-Log Grid & Axis Ticks -->
@@ -85,7 +87,7 @@
     </g>
 
     <!-- Clean Non-Overlapping Roofline Annotations -->
-    <g transform="translate(284.0,146.4) rotate(-23.86)">
+    <g transform="translate(256.0,158.8) rotate(-23.86)">
       <line x1="-64" y1="-25" x2="-50" y2="-25" stroke="#64748b" stroke-width="1.1" stroke-dasharray="3 2.5"/>
       <text x="-46" y="-22.2" fill="#94a3b8" font-size="7.8" class="mono">Nominal GDDR7 384 GB/s</text>
       <line x1="-78" y1="-12.5" x2="-64" y2="-12.5" stroke="#10f5a0" stroke-width="1.9" stroke-linecap="round"/>

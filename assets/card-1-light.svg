@@ -25,6 +25,8 @@
     .c1b { stroke-dasharray: 26 184; animation: c1b 2.9s linear infinite; }
     .c1c { stroke-dasharray: 24 166; animation: c1c 2.2s linear infinite; }
     
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
 
   <g clip-path="url(#cClip_01)">
