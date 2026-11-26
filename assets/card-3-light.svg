@@ -5,11 +5,11 @@
       <stop offset="100%" stop-color="#f8fafc"/>
     </linearGradient>
     <pattern id="dGrid_03" width="16" height="16" patternUnits="userSpaceOnUse">
-      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#152136" stroke-width="0.6" stroke-opacity="0.65"/>
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#e2e8f0" stroke-width="0.6" stroke-opacity="0.65"/>
     </pattern>
     <clipPath id="cClip_03"><rect x="1" y="1" width="878" height="170" rx="12"/></clipPath>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="2.0" result="blur"/>
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
@@ -30,28 +30,28 @@
     <!-- Left Domain Accent Spine -->
     <rect x="0" y="0" width="6" height="172" fill="#6d28d9"/>
 
-    <!-- Left 326x146 Deep Obsidian OLED Micro-Display (High Contrast in BOTH Light & Dark!) -->
-    <rect x="18" y="13" width="324" height="146" rx="8" fill="#070c16" stroke="#1e293b" stroke-width="1.2"/>
+    <!-- Left 326x146 Crisp Light Silicon Blueprint Micro-Display -->
+    <rect x="18" y="13" width="324" height="146" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
     <rect x="19" y="14" width="322" height="144" rx="7" fill="url(#dGrid_03)"/>
-    <text x="29" y="28" fill="#b57bff" font-size="8.1" font-weight="700" letter-spacing="0.65" class="mono">ZIGZAG CAUSAL RING · P=4</text>
-    <text x="332" y="28" text-anchor="end" fill="#7d8fa6" font-size="7.6" font-weight="600" class="mono">err 8.58e-6</text>
+    <text x="29" y="28" fill="#6d28d9" font-size="8.1" font-weight="700" letter-spacing="0.65" class="mono">ZIGZAG CAUSAL RING · P=4</text>
+    <text x="332" y="28" text-anchor="end" fill="#64748b" font-size="7.6" font-weight="600" class="mono">err 8.58e-6</text>
     <g>
-      <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#b57bff" stroke-width="1.9" stroke-opacity="0.34"/>
-      <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#b57bff" stroke-width="2.6" stroke-linecap="round" filter="url(#glow)" class="rng1"/>
-      <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#00e5ff" stroke-width="2.2" stroke-linecap="round" filter="url(#glow)" class="rng2"/>
+      <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#6d28d9" stroke-width="1.9" stroke-opacity="0.42"/>
+      <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#6d28d9" stroke-width="2.6" stroke-linecap="round" filter="url(#glow)" class="rng1"/>
+      <path d="M 180 48 C 246 48, 276 65, 276 92 C 276 119, 246 136, 180 136 C 114 136, 84 119, 84 92 C 84 65, 114 48, 180 48 Z" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" filter="url(#glow)" class="rng2"/>
 
       <!-- Clockwise Chevrons -->
-      <polygon points="240,56 249,60 242,64" fill="#b57bff" opacity="0.9"/>
-      <polygon points="242,120 249,124 240,128" fill="#b57bff" opacity="0.9"/>
-      <polygon points="120,128 111,124 118,120" fill="#b57bff" opacity="0.9"/>
-      <polygon points="118,64 111,60 120,56" fill="#b57bff" opacity="0.9"/>
+      <polygon points="240,56 249,60 242,64" fill="#6d28d9" opacity="0.9"/>
+      <polygon points="242,120 249,124 240,128" fill="#6d28d9" opacity="0.9"/>
+      <polygon points="120,128 111,124 118,120" fill="#6d28d9" opacity="0.9"/>
+      <polygon points="118,64 111,60 120,56" fill="#6d28d9" opacity="0.9"/>
 
       <!-- Center Balance Hub -->
-      <rect x="139" y="76" width="82" height="32" rx="16" fill="#1e113b" stroke="#6d28d9" stroke-width="1.15"/>
-      <text x="180" y="90.5" text-anchor="middle" fill="#b57bff" font-size="9.0" font-weight="700" class="mono">1.00× BAL</text>
-      <text x="180" y="101.5" text-anchor="middle" fill="#cbd5e1" font-size="7.3" class="mono">25% × 4 Ranks</text>
+      <rect x="139" y="76" width="82" height="32" rx="16" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.15"/>
+      <text x="180" y="90.5" text-anchor="middle" fill="#6d28d9" font-size="9.0" font-weight="700" class="mono">1.00× BAL</text>
+      <text x="180" y="101.5" text-anchor="middle" fill="#334155" font-size="7.3" class="mono">25% × 4 Ranks</text>
 
-      <rect x="142" y="34" width="76" height="26" rx="5.5" fill="#0d1526" stroke="#b57bff" stroke-width="1.25"/><text x="180" y="46" text-anchor="middle" fill="#b57bff" font-size="8.3" font-weight="700" class="mono">R0 <tspan fill="#e2e8f0" font-weight="600">[c0,c7]</tspan></text><rect x="152" y="51.5" width="56" height="3.2" rx="1.6" fill="#1e293b"/><rect x="152" y="51.5" width="56" height="3.2" rx="1.6" fill="#10f5a0" opacity="0.85"/><rect x="238" y="79" width="76" height="26" rx="5.5" fill="#0d1526" stroke="#b57bff" stroke-width="1.25"/><text x="276" y="91" text-anchor="middle" fill="#b57bff" font-size="8.3" font-weight="700" class="mono">R1 <tspan fill="#e2e8f0" font-weight="600">[c1,c6]</tspan></text><rect x="248" y="96.5" width="56" height="3.2" rx="1.6" fill="#1e293b"/><rect x="248" y="96.5" width="56" height="3.2" rx="1.6" fill="#10f5a0" opacity="0.85"/><rect x="142" y="123" width="76" height="26" rx="5.5" fill="#0d1526" stroke="#b57bff" stroke-width="1.25"/><text x="180" y="135" text-anchor="middle" fill="#b57bff" font-size="8.3" font-weight="700" class="mono">R2 <tspan fill="#e2e8f0" font-weight="600">[c2,c5]</tspan></text><rect x="152" y="140.5" width="56" height="3.2" rx="1.6" fill="#1e293b"/><rect x="152" y="140.5" width="56" height="3.2" rx="1.6" fill="#10f5a0" opacity="0.85"/><rect x="46" y="79" width="76" height="26" rx="5.5" fill="#0d1526" stroke="#b57bff" stroke-width="1.25"/><text x="84" y="91" text-anchor="middle" fill="#b57bff" font-size="8.3" font-weight="700" class="mono">R3 <tspan fill="#e2e8f0" font-weight="600">[c3,c4]</tspan></text><rect x="56" y="96.5" width="56" height="3.2" rx="1.6" fill="#1e293b"/><rect x="56" y="96.5" width="56" height="3.2" rx="1.6" fill="#10f5a0" opacity="0.85"/>
+      <rect x="142" y="34" width="76" height="26" rx="5.5" fill="#ffffff" stroke="#6d28d9" stroke-width="1.25"/><text x="180" y="46" text-anchor="middle" fill="#6d28d9" font-size="8.3" font-weight="700" class="mono">R0 <tspan fill="#334155" font-weight="600">[c0,c7]</tspan></text><rect x="152" y="51.5" width="56" height="3.2" rx="1.6" fill="#cbd5e1"/><rect x="152" y="51.5" width="56" height="3.2" rx="1.6" fill="#047857" opacity="0.85"/><rect x="238" y="79" width="76" height="26" rx="5.5" fill="#ffffff" stroke="#6d28d9" stroke-width="1.25"/><text x="276" y="91" text-anchor="middle" fill="#6d28d9" font-size="8.3" font-weight="700" class="mono">R1 <tspan fill="#334155" font-weight="600">[c1,c6]</tspan></text><rect x="248" y="96.5" width="56" height="3.2" rx="1.6" fill="#cbd5e1"/><rect x="248" y="96.5" width="56" height="3.2" rx="1.6" fill="#047857" opacity="0.85"/><rect x="142" y="123" width="76" height="26" rx="5.5" fill="#ffffff" stroke="#6d28d9" stroke-width="1.25"/><text x="180" y="135" text-anchor="middle" fill="#6d28d9" font-size="8.3" font-weight="700" class="mono">R2 <tspan fill="#334155" font-weight="600">[c2,c5]</tspan></text><rect x="152" y="140.5" width="56" height="3.2" rx="1.6" fill="#cbd5e1"/><rect x="152" y="140.5" width="56" height="3.2" rx="1.6" fill="#047857" opacity="0.85"/><rect x="46" y="79" width="76" height="26" rx="5.5" fill="#ffffff" stroke="#6d28d9" stroke-width="1.25"/><text x="84" y="91" text-anchor="middle" fill="#6d28d9" font-size="8.3" font-weight="700" class="mono">R3 <tspan fill="#334155" font-weight="600">[c3,c4]</tspan></text><rect x="56" y="96.5" width="56" height="3.2" rx="1.6" fill="#cbd5e1"/><rect x="56" y="96.5" width="56" height="3.2" rx="1.6" fill="#047857" opacity="0.85"/>
     </g>
 
     <!-- Right Specification Panel -->
