@@ -63,7 +63,7 @@
 </p>
 
 <details>
-<summary><strong>▸ Verified Benchmark Ledger (RTX 5060 sm_120 · 5-Run ABA Medians · 24/24 Tests Pass)</strong></summary>
+<summary><strong>Verified Benchmark Ledger (RTX 5060 sm_120 · 5-Run ABA Medians · 24/24 Tests Pass)</strong></summary>
 
 | System | Workload &amp; Target | Strong Baseline | Measured Result | Verified Delta &amp; Audit |
 | :--- | :--- | :---: | :---: | :--- |
@@ -82,7 +82,7 @@
 </details>
 
 <details>
-<summary><strong>▸ Live GraphQL Contribution Telemetry (Animated Activity Grid)</strong></summary>
+<summary><strong>Live GraphQL Contribution Telemetry (Animated Activity Grid)</strong></summary>
 
 <p align="center">
   <picture>
