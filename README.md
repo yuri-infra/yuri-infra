@@ -16,9 +16,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/bento-telemetry-dark.svg?v=7">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/bento-telemetry-light.svg?v=7">
-    <img alt="RTX 5060 Empirical Log-Log Roofline Oscilloscope and Live Terminal Telemetry" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/bento-telemetry-light.svg?v=7" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/bento-telemetry-dark.svg?v=8">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/bento-telemetry-light.svg?v=8">
+    <img alt="RTX 5060 Empirical Log-Log Roofline Oscilloscope and Live Terminal Telemetry" src="https://raw.githubusercontent.com/yuri-infra/yuri-infra/main/assets/bento-telemetry-light.svg?v=8" width="100%">
   </picture>
 </p>
 
